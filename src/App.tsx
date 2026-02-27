@@ -17,7 +17,6 @@ import {
   Facebook
 } from 'lucide-react';
 import { motion } from 'motion/react';
-import AIChatbot from './components/AIChatbot';
 import { cn } from './lib/utils';
 
 const destinations = [
@@ -55,7 +54,7 @@ export default function App() {
               <a href="#home" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Home</a>
               <a href="#services" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Services</a>
               <a href="#destinations" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Destinations</a>
-              <a href="https://www.instagram.com/joshua__ll1/" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg active:scale-95">
+              <a href="#contact" className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg active:scale-95">
                 Contact Us
               </a>
             </div>
@@ -77,7 +76,7 @@ export default function App() {
             <a href="#home" className="block text-base font-medium text-slate-600" onClick={() => setIsMenuOpen(false)}>Home</a>
             <a href="#services" className="block text-base font-medium text-slate-600" onClick={() => setIsMenuOpen(false)}>Services</a>
             <a href="#destinations" className="block text-base font-medium text-slate-600" onClick={() => setIsMenuOpen(false)}>Destinations</a>
-            <a href="https://www.instagram.com/joshua__ll1/" target="_blank" rel="noopener noreferrer" className="block bg-indigo-600 text-white px-4 py-2 rounded-lg text-center font-semibold" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
+            <a href="#contact" className="block bg-indigo-600 text-white px-4 py-2 rounded-lg text-center font-semibold" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
           </motion.div>
         )}
       </nav>
@@ -101,12 +100,12 @@ export default function App() {
                 Expert guidance for students aspiring to study in the world's top universities. From application to visa, we've got you covered.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold hover:bg-indigo-700 transition-all shadow-xl hover:shadow-indigo-200 flex items-center gap-2 group">
+                <a href="#contact" className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold hover:bg-indigo-700 transition-all shadow-xl hover:shadow-indigo-200 flex items-center gap-2 group">
                   Start Your Journey <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all">
+                </a>
+                <a href="#destinations" className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all text-center">
                   View Destinations
-                </button>
+                </a>
               </div>
               
               <div className="mt-12 flex items-center gap-6">
@@ -187,9 +186,9 @@ export default function App() {
               <h2 className="text-3xl sm:text-4xl font-serif font-medium text-slate-900 mb-4">Top Study Destinations</h2>
               <p className="text-slate-600">Explore the most popular countries chosen by international students for their higher education.</p>
             </div>
-            <button className="text-indigo-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
+            <a href="#destinations" className="text-indigo-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
               View All Countries <ChevronRight size={20} />
-            </button>
+            </a>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -290,9 +289,9 @@ export default function App() {
                   <label className="text-sm font-semibold text-slate-700">Message</label>
                   <textarea className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-indigo-500 outline-none transition-all h-32" placeholder="Tell us about your goals..."></textarea>
                 </div>
-                <a href="https://www.instagram.com/joshua__ll1/" target="_blank" rel="noopener noreferrer" className="block w-full bg-indigo-600 text-white py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg active:scale-[0.98] text-center">
+                <button className="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg active:scale-[0.98]">
                   Send Message
-                </a>
+                </button>
               </form>
             </div>
           </div>
@@ -314,30 +313,30 @@ export default function App() {
                 Empowering students to achieve their academic dreams through expert guidance and personalized consultancy.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="text-slate-400 hover:text-indigo-600 transition-colors"><Instagram size={20} /></a>
-                <a href="#" className="text-slate-400 hover:text-indigo-600 transition-colors"><Twitter size={20} /></a>
-                <a href="#" className="text-slate-400 hover:text-indigo-600 transition-colors"><Linkedin size={20} /></a>
-                <a href="#" className="text-slate-400 hover:text-indigo-600 transition-colors"><Facebook size={20} /></a>
+                <a href="#home" className="text-slate-400 hover:text-indigo-600 transition-colors"><Instagram size={20} /></a>
+                <a href="#home" className="text-slate-400 hover:text-indigo-600 transition-colors"><Twitter size={20} /></a>
+                <a href="#home" className="text-slate-400 hover:text-indigo-600 transition-colors"><Linkedin size={20} /></a>
+                <a href="#home" className="text-slate-400 hover:text-indigo-600 transition-colors"><Facebook size={20} /></a>
               </div>
             </div>
             
             <div>
               <h4 className="font-bold text-slate-900 mb-6">Quick Links</h4>
               <ul className="space-y-4 text-sm text-slate-500">
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">Our Services</a></li>
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">Study Destinations</a></li>
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">Success Stories</a></li>
+                <li><a href="#home" className="hover:text-indigo-600 transition-colors">About Us</a></li>
+                <li><a href="#services" className="hover:text-indigo-600 transition-colors">Our Services</a></li>
+                <li><a href="#destinations" className="hover:text-indigo-600 transition-colors">Study Destinations</a></li>
+                <li><a href="#home" className="hover:text-indigo-600 transition-colors">Success Stories</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-slate-900 mb-6">Resources</h4>
               <ul className="space-y-4 text-sm text-slate-500">
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">Visa Guide</a></li>
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">Scholarship Info</a></li>
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">Test Prep Blog</a></li>
-                <li><a href="#" className="hover:text-indigo-600 transition-colors">FAQ</a></li>
+                <li><a href="#home" className="hover:text-indigo-600 transition-colors">Visa Guide</a></li>
+                <li><a href="#home" className="hover:text-indigo-600 transition-colors">Scholarship Info</a></li>
+                <li><a href="#home" className="hover:text-indigo-600 transition-colors">Test Prep Blog</a></li>
+                <li><a href="#home" className="hover:text-indigo-600 transition-colors">FAQ</a></li>
               </ul>
             </div>
 
@@ -354,16 +353,13 @@ export default function App() {
           <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
             <p>© 2024 GlobalPath Consultants. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-indigo-600 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-indigo-600 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-indigo-600 transition-colors">Cookie Policy</a>
+              <a href="#home" className="hover:text-indigo-600 transition-colors">Privacy Policy</a>
+              <a href="#home" className="hover:text-indigo-600 transition-colors">Terms of Service</a>
+              <a href="#home" className="hover:text-indigo-600 transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>
       </footer>
-
-      {/* AI Chatbot */}
-      <AIChatbot />
     </div>
   );
 }
